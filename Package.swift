@@ -16,13 +16,12 @@ let package = Package(
             targets: ["IGDB-SWIFT-API"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/dduan/Just.git",  from: "0.8.0"),
         .package(url: "https://github.com/apple/swift-protobuf.git", from: "1.21.0")
     ],
     targets: [
         .target(
             name: "IGDB-SWIFT-API",
-            dependencies: ["Just", "SwiftProtobuf"]),
+            dependencies: ["SwiftProtobuf"]),
         .testTarget(
             name: "IGDB-SWIFT-APITests",
             dependencies: ["IGDB-SWIFT-API"]),

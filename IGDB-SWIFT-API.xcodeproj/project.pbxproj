@@ -31,7 +31,6 @@
 		OBJ_137 /* ProtoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* ProtoRequest.swift */; };
 		OBJ_138 /* RequestException.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* RequestException.swift */; };
 		OBJ_140 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftProtobuf::SwiftProtobuf::Product" /* SwiftProtobuf.framework */; };
-		OBJ_141 /* Just.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Just::Just::Product" /* Just.framework */; };
 		OBJ_151 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_162 /* TestApiCalypseQueryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* TestApiCalypseQueryParser.swift */; };
 		OBJ_163 /* TestIGDBWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* TestIGDBWrapper.swift */; };
@@ -39,9 +38,6 @@
 		OBJ_165 /* TestProtobufRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* TestProtobufRequest.swift */; };
 		OBJ_167 /* IGDB_SWIFT_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "IGDB-SWIFT-API::IGDB-SWIFT-API::Product" /* IGDB_SWIFT_API.framework */; };
 		OBJ_168 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftProtobuf::SwiftProtobuf::Product" /* SwiftProtobuf.framework */; };
-		OBJ_169 /* Just.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Just::Just::Product" /* Just.framework */; };
-		OBJ_177 /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_117 /* Just.swift */; };
-		OBJ_184 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_118 /* Package.swift */; };
 		OBJ_189 /* AnyMessageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* AnyMessageStorage.swift */; };
 		OBJ_190 /* AnyUnpackError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* AnyUnpackError.swift */; };
 		OBJ_191 /* BinaryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* BinaryDecoder.swift */; };
@@ -136,13 +132,6 @@
 			remoteGlobalIDString = "SwiftProtobuf::SwiftProtobuf";
 			remoteInfo = SwiftProtobuf;
 		};
-		59BE9023251CF0F60048499D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Just::Just";
-			remoteInfo = Just;
-		};
 		59BE9024251CF0F60048499D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -157,13 +146,6 @@
 			remoteGlobalIDString = "SwiftProtobuf::SwiftProtobuf";
 			remoteInfo = SwiftProtobuf;
 		};
-		59BE9026251CF0F60048499D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Just::Just";
-			remoteInfo = Just;
-		};
 		59BE9027251CF0F70048499D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -176,9 +158,8 @@
 /* Begin PBXFileReference section */
 		59BE9028251CF1020048499D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		59CBB79F257A8498005808FE /* TestCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCount.swift; sourceTree = "<group>"; };
-		"IGDB-SWIFT-API::IGDB-SWIFT-API::Product" /* IGDB_SWIFT_API.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IGDB_SWIFT_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"IGDB-SWIFT-API::IGDB-SWIFT-APITests::Product" /* IGDB_SWIFT_APITests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; name = IGDB_SWIFT_APITests.xctest; path = "IGDB-SWIFT-APITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Just::Just::Product" /* Just.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Just.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"IGDB-SWIFT-API::IGDB-SWIFT-API::Product" /* IGDB_SWIFT_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IGDB_SWIFT_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"IGDB-SWIFT-API::IGDB-SWIFT-APITests::Product" /* IGDB-SWIFT-APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = "IGDB-SWIFT-APITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* IGDBProtoFile.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGDBProtoFile.pb.swift; sourceTree = "<group>"; };
 		OBJ_100 /* ZigZag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZigZag.swift; sourceTree = "<group>"; };
 		OBJ_101 /* any.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = any.pb.swift; sourceTree = "<group>"; };
@@ -193,8 +174,6 @@
 		OBJ_110 /* type.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = type.pb.swift; sourceTree = "<group>"; };
 		OBJ_111 /* wrappers.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wrappers.pb.swift; sourceTree = "<group>"; };
 		OBJ_114 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/husnjak/Documents/GitHub/Api_Wrappers/IGDB_SWIFT_API/.build/checkouts/swift-protobuf/Package.swift"; sourceTree = "<group>"; };
-		OBJ_117 /* Just.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
-		OBJ_118 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/husnjak/Documents/GitHub/Api_Wrappers/IGDB_SWIFT_API/.build/checkouts/Just/Package.swift; sourceTree = "<group>"; };
 		OBJ_12 /* APICalypse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICalypse.swift; sourceTree = "<group>"; };
 		OBJ_124 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_125 /* IGDB-SWIFT-API.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "IGDB-SWIFT-API.podspec"; sourceTree = "<group>"; };
@@ -289,7 +268,6 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_140 /* SwiftProtobuf.framework in Frameworks */,
-				OBJ_141 /* Just.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,14 +277,6 @@
 			files = (
 				OBJ_167 /* IGDB_SWIFT_API.framework in Frameworks */,
 				OBJ_168 /* SwiftProtobuf.framework in Frameworks */,
-				OBJ_169 /* Just.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_178 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,30 +320,11 @@
 			path = ".build/checkouts/swift-protobuf/Sources/protoc-gen-swift";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_115 /* Just 0.8.0 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_116 /* Just */,
-				OBJ_118 /* Package.swift */,
-			);
-			name = "Just 0.8.0";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_116 /* Just */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_117 /* Just.swift */,
-			);
-			name = Just;
-			path = .build/checkouts/Just/Sources/Just;
-			sourceTree = SOURCE_ROOT;
-		};
 		OBJ_119 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				"SwiftProtobuf::SwiftProtobuf::Product" /* SwiftProtobuf.framework */,
-				"IGDB-SWIFT-API::IGDB-SWIFT-APITests::Product" /* IGDB_SWIFT_APITests.xctest */,
-				"Just::Just::Product" /* Just.framework */,
+				"IGDB-SWIFT-API::IGDB-SWIFT-APITests::Product" /* IGDB-SWIFT-APITests.xctest */,
 				"IGDB-SWIFT-API::IGDB-SWIFT-API::Product" /* IGDB_SWIFT_API.framework */,
 			);
 			name = Products;
@@ -404,7 +355,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_26 /* SwiftProtobuf 1.12.0 */,
-				OBJ_115 /* Just 0.8.0 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -574,7 +524,6 @@
 			);
 			dependencies = (
 				OBJ_142 /* PBXTargetDependency */,
-				OBJ_144 /* PBXTargetDependency */,
 			);
 			name = "IGDB-SWIFT-API";
 			productName = IGDB_SWIFT_API;
@@ -593,11 +542,10 @@
 			dependencies = (
 				OBJ_170 /* PBXTargetDependency */,
 				OBJ_171 /* PBXTargetDependency */,
-				OBJ_172 /* PBXTargetDependency */,
 			);
 			name = "IGDB-SWIFT-APITests";
 			productName = IGDB_SWIFT_APITests;
-			productReference = "IGDB-SWIFT-API::IGDB-SWIFT-APITests::Product" /* IGDB_SWIFT_APITests.xctest */;
+			productReference = "IGDB-SWIFT-API::IGDB-SWIFT-APITests::Product" /* IGDB-SWIFT-APITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		"IGDB-SWIFT-API::SwiftPMPackageDescription" /* IGDB-SWIFT-APIPackageDescription */ = {
@@ -612,36 +560,6 @@
 			);
 			name = "IGDB-SWIFT-APIPackageDescription";
 			productName = "IGDB-SWIFT-APIPackageDescription";
-			productType = "com.apple.product-type.framework";
-		};
-		"Just::Just" /* Just */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_173 /* Build configuration list for PBXNativeTarget "Just" */;
-			buildPhases = (
-				OBJ_176 /* Sources */,
-				OBJ_178 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Just;
-			productName = Just;
-			productReference = "Just::Just::Product" /* Just.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"Just::SwiftPMPackageDescription" /* JustPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_180 /* Build configuration list for PBXNativeTarget "JustPackageDescription" */;
-			buildPhases = (
-				OBJ_183 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = JustPackageDescription;
-			productName = JustPackageDescription;
 			productType = "com.apple.product-type.framework";
 		};
 		"SwiftProtobuf::SwiftPMPackageDescription" /* SwiftProtobufPackageDescription */ = {
@@ -699,8 +617,6 @@
 				"IGDB-SWIFT-API::SwiftPMPackageDescription" /* IGDB-SWIFT-APIPackageDescription */,
 				"IGDB-SWIFT-API::IGDB-SWIFT-APIPackageTests::ProductTarget" /* IGDB-SWIFT-APIPackageTests */,
 				"IGDB-SWIFT-API::IGDB-SWIFT-APITests" /* IGDB-SWIFT-APITests */,
-				"Just::Just" /* Just */,
-				"Just::SwiftPMPackageDescription" /* JustPackageDescription */,
 				"SwiftProtobuf::SwiftProtobuf" /* SwiftProtobuf */,
 				"SwiftProtobuf::SwiftPMPackageDescription" /* SwiftProtobufPackageDescription */,
 			);
@@ -740,22 +656,6 @@
 				OBJ_164 /* TestImageBuilder.swift in Sources */,
 				59CBB7A0257A8498005808FE /* TestCount.swift in Sources */,
 				OBJ_165 /* TestProtobufRequest.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_176 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_177 /* Just.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_183 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_184 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,11 +765,6 @@
 			target = "SwiftProtobuf::SwiftProtobuf" /* SwiftProtobuf */;
 			targetProxy = 59BE9022251CF0F60048499D /* PBXContainerItemProxy */;
 		};
-		OBJ_144 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Just::Just" /* Just */;
-			targetProxy = 59BE9023251CF0F60048499D /* PBXContainerItemProxy */;
-		};
 		OBJ_156 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "IGDB-SWIFT-API::IGDB-SWIFT-APITests" /* IGDB-SWIFT-APITests */;
@@ -884,11 +779,6 @@
 			isa = PBXTargetDependency;
 			target = "SwiftProtobuf::SwiftProtobuf" /* SwiftProtobuf */;
 			targetProxy = 59BE9025251CF0F60048499D /* PBXContainerItemProxy */;
-		};
-		OBJ_172 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Just::Just" /* Just */;
-			targetProxy = 59BE9026251CF0F60048499D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1026,80 +916,6 @@
 				TARGET_NAME = "IGDB-SWIFT-APITests";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Release;
-		};
-		OBJ_174 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "IGDB-SWIFT-API.xcodeproj/Just_Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Just;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Just;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_175 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "IGDB-SWIFT-API.xcodeproj/Just_Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Just;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Just;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_181 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_182 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1255,24 +1071,6 @@
 			buildConfigurations = (
 				OBJ_159 /* Debug */,
 				OBJ_160 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_173 /* Build configuration list for PBXNativeTarget "Just" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_174 /* Debug */,
-				OBJ_175 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_180 /* Build configuration list for PBXNativeTarget "JustPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_181 /* Debug */,
-				OBJ_182 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
