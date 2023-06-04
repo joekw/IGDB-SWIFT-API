@@ -25,6 +25,7 @@ public enum ImageSize: String {
     case SCREENSHOT_HUGE = "t_screenshot_huge"  // 1280 x 720   Lfill, Center gravity
     case HD = "t_720p"                          // 1280 x 720   Fit, Center gravity
     case FHD = "t_1080p"                        // 1920 x 1080  Fit, Center gravity
+    case ORIGINAL = "t_original"
 }
 
 // These are all of the available image types
