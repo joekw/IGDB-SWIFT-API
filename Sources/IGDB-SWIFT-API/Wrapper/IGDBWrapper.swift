@@ -24,7 +24,7 @@ public class IGDBWrapper {
         requestHeaders["x-user-agent"] = "igdb-api-swift"
     }
 
-    public func apiProtoRequest(endpoint: Endpoint, apicalypseQuery: String, completion: @escaping (Result<Data, Error>) -> Void) {
+    public func apiProtoRequest(endpoint: Endpoint, apicalypseQuery: String, dataResponse: @escaping (Data) -> (Void), errorResponse: @escaping (RequestException) -> (Void)) {
         let requestURL = "\(APIURL)\(endpoint.url()).pb"
         var urlComp = URLComponents(string: requestURL)!
 
@@ -37,14 +37,17 @@ public class IGDBWrapper {
 
         let task = URLSession(configuration: .ephemeral).dataTask(with: req) { [weak self] data, response, error in
             if let error = error {
-                completion(.failure(error))
+                print(error.localizedDescription)
+                errorResponse(RequestException(statusCode: 400, url: requestURL, msg: error.localizedDescription))
             } else if
                 let data = data,
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
                 DispatchQueue.main.async {
-                    completion(.success(data))
+                    dataResponse(data)
                 }
+            } else {
+                errorResponse(RequestException(statusCode: 404, url: requestURL, msg: ""))
             }
         }
         task.resume()
