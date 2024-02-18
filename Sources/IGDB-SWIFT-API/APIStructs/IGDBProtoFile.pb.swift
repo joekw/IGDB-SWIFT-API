@@ -2387,14 +2387,10 @@ public struct Proto_Game {
     set {_uniqueStorage()._category = newValue}
   }
 
-  public var collection: Proto_Collection {
-    get {return _storage._collection ?? Proto_Collection()}
-    set {_uniqueStorage()._collection = newValue}
+  public var collections: [Proto_Collection] {
+    get {return _storage._collections}
+    set {_uniqueStorage()._collections = newValue}
   }
-  /// Returns true if `collection` has been explicitly set.
-  public var hasCollection: Bool {return _storage._collection != nil}
-  /// Clears the value of `collection`. Subsequent reads from it will return its default value.
-  public mutating func clearCollection() {_uniqueStorage()._collection = nil}
 
   public var cover: Proto_Cover {
     get {return _storage._cover ?? Proto_Cover()}
@@ -6961,7 +6957,7 @@ extension Proto_Game: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
     6: .same(proto: "artworks"),
     7: .same(proto: "bundles"),
     8: .same(proto: "category"),
-    9: .same(proto: "collection"),
+    9: .same(proto: "collections"),
     10: .same(proto: "cover"),
     11: .standard(proto: "created_at"),
     12: .same(proto: "dlcs"),
@@ -7021,7 +7017,7 @@ extension Proto_Game: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
     var _artworks: [Proto_Artwork] = []
     var _bundles: [Proto_Game] = []
     var _category: Proto_GameCategoryEnum = .mainGame
-    var _collection: Proto_Collection? = nil
+    var _collections: [Proto_Collection] = []
     var _cover: Proto_Cover? = nil
     var _createdAt: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _dlcs: [Proto_Game] = []
@@ -7084,7 +7080,7 @@ extension Proto_Game: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
       _artworks = source._artworks
       _bundles = source._bundles
       _category = source._category
-      _collection = source._collection
+      _collections = source._collections
       _cover = source._cover
       _createdAt = source._createdAt
       _dlcs = source._dlcs
@@ -7159,7 +7155,7 @@ extension Proto_Game: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
         case 6: try { try decoder.decodeRepeatedMessageField(value: &_storage._artworks) }()
         case 7: try { try decoder.decodeRepeatedMessageField(value: &_storage._bundles) }()
         case 8: try { try decoder.decodeSingularEnumField(value: &_storage._category) }()
-        case 9: try { try decoder.decodeSingularMessageField(value: &_storage._collection) }()
+        case 9: try { try decoder.decodeRepeatedMessageField(value: &_storage._collections) }()
         case 10: try { try decoder.decodeSingularMessageField(value: &_storage._cover) }()
         case 11: try { try decoder.decodeSingularMessageField(value: &_storage._createdAt) }()
         case 12: try { try decoder.decodeRepeatedMessageField(value: &_storage._dlcs) }()
@@ -7244,9 +7240,9 @@ extension Proto_Game: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
       if _storage._category != .mainGame {
         try visitor.visitSingularEnumField(value: _storage._category, fieldNumber: 8)
       }
-      try { if let v = _storage._collection {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
-      } }()
+        if !_storage._collections.isEmpty {
+            try visitor.visitRepeatedMessageField(value: _storage._collections, fieldNumber: 9)
+        }
       try { if let v = _storage._cover {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 10)
       } }()
@@ -7408,7 +7404,7 @@ extension Proto_Game: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
         if _storage._artworks != rhs_storage._artworks {return false}
         if _storage._bundles != rhs_storage._bundles {return false}
         if _storage._category != rhs_storage._category {return false}
-        if _storage._collection != rhs_storage._collection {return false}
+        if _storage._collections != rhs_storage._collections {return false}
         if _storage._cover != rhs_storage._cover {return false}
         if _storage._createdAt != rhs_storage._createdAt {return false}
         if _storage._dlcs != rhs_storage._dlcs {return false}
