@@ -16,44 +16,44 @@ public class APICalypse {
     private var offset = ""
     private var sort = ""
     private var _where = ""
-    
+
     public init() {}
-    
+
     public func sort(field: String, order: Sort) -> APICalypse {
         self.sort = "s \(field) \(order.rawValue);"
         return self
     }
-    
+
     public func fields(fields: String) -> APICalypse {
         self.fields = "f \(fields);"
         return self
     }
-    
+
     public func exclude(fields: String) -> APICalypse {
         self.exclude = "x \(fields);"
         return self
     }
-    
+
     public func limit(value: Int32) -> APICalypse {
         self.limit = "l \(value);"
         return self
     }
-    
+
     public func offset(value: Int32) -> APICalypse {
         self.offset = "o \(value);"
         return self
     }
-    
+
     public func search(searchQuery: String) -> APICalypse {
         self.search = "search \"\(searchQuery)\";"
         return self
     }
-    
+
     public func `where`(query: String) -> APICalypse {
         self._where = "w \(query);"
         return self
     }
-    
+
     public func buildQuery() -> String {
         var query = ""
         if !search.isEmpty {
@@ -77,7 +77,7 @@ public class APICalypse {
         if !_where.isEmpty {
             query = query + _where
         }
-        
+
         return query
     }
 }
